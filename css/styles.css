@@ -15,7 +15,7 @@ html {
   --hero-text-color: #001e41;
   --nav-text-color: #7d7d7d;
   --card-background-color: #f8f8fa;
-  --modal-backdrop-color: rgba(0, 0, 0, 0.1);
+  /* --modal-backdrop-color: rgba(0, 0, 0, 0.1); */
 }
 
 body {
@@ -39,7 +39,11 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   padding: 0;
   margin: 0;
 }
@@ -72,7 +76,7 @@ h1, h2, h3, h4, p {
   }
 }
 
- /* header   */
+/* header   */
 
 .page-header {
   border-bottom: 1px solid #e5e5e5;
@@ -441,9 +445,9 @@ h1, h2, h3, h4, p {
   left: 0%;
   width: 45%;
   transform: translateY(-50%);
-  animation-name: Anime;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+  animation-name: Anime2;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 @media screen and (min-width: 1200px) {
@@ -460,8 +464,8 @@ h1, h2, h3, h4, p {
   left: 15px;
   width: 45%;
   animation-name: Anime;
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 @media screen and (min-width: 1200px) {
@@ -477,9 +481,9 @@ h1, h2, h3, h4, p {
   top: 9%;
   left: 57%;
   width: 45%;
-  animation-name: Anime;
+  animation-name: Anime3;
   animation-duration: 3s;
-  animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 @media screen and (min-width: 1200px) {
@@ -489,7 +493,7 @@ h1, h2, h3, h4, p {
     left: 62%;
   }
 }
-
+/* Anime  */
 @-webkit-keyframes Anime {
   0% {
     opacity: 0;
@@ -501,22 +505,41 @@ h1, h2, h3, h4, p {
 
 @-o-keyframes Anime {
   0% {
-    opacity: 0;
+    transform: rotate(0deg);
   }
   100% {
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 
 @-moz-keyframes Anime {
   0% {
-    opacity: 0;
+    transform: rotate(0deg);
   }
   100% {
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 @keyframes Anime {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Anime2  */
+@-webkit-keyframes Anime2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes Anime2 {
   0% {
     opacity: 0;
   }
@@ -525,6 +548,59 @@ h1, h2, h3, h4, p {
   }
 }
 
+@-moz-keyframes Anime2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Anime2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Anime3  */
+@-webkit-keyframes Anime3 {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-o-keyframes Anime3 {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-moz-keyframes Anime3 {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+
+}
+@keyframes Anime3 {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 /*cards*/
 
 .section-cards {
@@ -853,40 +929,34 @@ h1, h2, h3, h4, p {
   position: absolute;
 }
 
-.checkbox-icon{
-display: inline-block;
-width: 15px;
-height: 12px;
-margin-right: 8px;
-border: 1px solid #919191;
-border-radius: 3px;
-
-
+.checkbox-icon {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  margin-right: 8px;
+  border: 1px solid #919191;
+  border-radius: 3px;
 }
 
- .modal-form__check:checked + .checkbox-icon{
-   border-color: grey;
+.modal-form__check:checked + .checkbox-icon {
+  border-color: grey;
   background-size: contain;
   background-origin: border-box;
   background-color: #007aff;
-  background-image: url('../image/icon-check.svg');
+  background-image: url("../image/icon-check.svg");
   background-size: contain;
   background-origin: border-box;
-
-  }
-
-  .checkbox-icon.error {
-    border: 1px solid red;
 }
 
-
+.checkbox-icon.error {
+  border: 1px solid red;
+}
 
 @media screen and (min-width: 1200px) {
   .modal-form__check-agree {
     font-size: 13px;
     line-height: 15px;
   }
-
 }
 
 .modal-form__checkbox {
@@ -925,14 +995,14 @@ border-radius: 3px;
     right: 18%;
     bottom: 28%;
   }
-  .alert-success{
+  .alert-success {
     right: 18%;
     bottom: 28%;
   }
 }
 
 .modal-label__list:focus {
-border: 1px solid grey
+  border: 1px solid grey;
 }
 
 .modal-label__list.error {
@@ -994,4 +1064,4 @@ border: 1px solid grey
     text-align: start;
     margin: 0;
   }
-} 
+}
